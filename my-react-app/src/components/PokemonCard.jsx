@@ -29,4 +29,3 @@ function PokemonCard (props) {
 
   export default PokemonCard
 
-
