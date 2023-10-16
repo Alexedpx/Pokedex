@@ -5,41 +5,26 @@ import { useState } from "react";
 const pokemonList = [
   {
     name: "bulbasaur",
-    imgSrc:
-    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+    imgSrc:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
   },
   
   {
-
     name: "charmander",
-
-    imgSrc:
-
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
+    imgSrc:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
 
   },
 
   {
-
     name: "squirtle",
-
-    imgSrc:
-
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
+    imgSrc:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
 
   },
 
   {
-
-    name: "pikachu",
-
-    imgSrc:
-
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+     name: "pikachu",
+    imgSrc:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
 
   },
-
-
 
   {
     name: "mew",
@@ -47,20 +32,16 @@ const pokemonList = [
 ];
 
 function App () {
-  
-  const [pokemonIndex, setpokemonIndex] = useState(0);
-  console.log(pokemonIndex)
 
-
-  
-
+   const [pokemonIndex, setpokemonIndex] = useState(0); 
+ 
   return (
-    <> 
-   
-      <Navbar pokemonIndex= {pokemonIndex} setpokemonIndex={setpokemonIndex} pokemonListLength={pokemonList.length}/>
+    <div> 
+      <Navbar pokemonIndex= {pokemonIndex} setpokemonIndex={setpokemonIndex} pokemonList={pokemonList}/>
       <PokemonCard pokemon={pokemonList[pokemonIndex]} />
-    </>
+    </div>
   );
+
 }
 
 
